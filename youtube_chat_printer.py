@@ -12,9 +12,10 @@ import pytchat
 import mc_api as mc
 
 # TODO: Parse blockstate
+# TODO: "X" joined the stream
 
-rcon = mc.connect("localhost", "test", port=25575, mute=False)
-chat = pytchat.create(video_id="ZitPxNYZFW0")
+rcon = mc.connect("localhost", "test", port=25576)
+chat = pytchat.create(video_id="mTPaIkbMH8Q")
 seed(int(time()))
 
 MAIN_ALT = "CVFhyum"
@@ -394,7 +395,7 @@ CTA_LIST = [
     "Like and subscribe for more interactive streams!",
 ]
 
-CTA_SPACING = 30
+CTA_SPACING = 100
 
 BLACK_LIST = [
     "sus",
@@ -406,6 +407,7 @@ BLACK_LIST = [
     "bakas",
     "amongus",
     "imposter",
+    "uwu",
 ]
 
 MESSAGE_COLOR = ["andesite"]
