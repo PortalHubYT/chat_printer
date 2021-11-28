@@ -1,8 +1,9 @@
 import time
+from .logger import log
 
-TPS = 0.33
-
+TPS = 20
 cycle_time = 1 / TPS
+
 remainer = 0
 
 
@@ -11,7 +12,10 @@ def run(called_at_time: float) -> None:
     global remainer
 
     if remainer > cycle_time:
-        print("3 second has passed in tick 2\n")
+        log(TPS)
+        print(TPS)
+        
         remainer = 0
+        # remainer = remainer - cycle_time
     else:
         remainer += time.time() - called_at_time
